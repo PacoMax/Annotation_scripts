@@ -22,11 +22,10 @@ Cazy_ou = sys.argv[2]
 
 Cazy=[]
 with open(Cazy_in, "r") as file:
-    # Itera sobre cada línea del archivo
     for line in file:
         # Procesa la línea
-        line = line.strip()  # Elimina espacios en blanco y caracteres de nueva línea
-        variables = line.split("\t")  # Separa la línea en variables por tabulación
+        line = line.strip()
+        variables = line.split("\t")  
         if variables[5]=="3":
             Cazy.append(variables[3])
         if variables[5]=="2":
@@ -41,12 +40,9 @@ with open(Cazy_in, "r") as file:
                 Cazy.append(variables[3])
             if variables[4]!="-":
                 Cazy.append(variables[4])
-        # Realiza alguna operación con las variables
     for variable in Cazy:
         variable=variable.split("+")
         new_variable= [re.sub(r'\(\w+-\w+\)', '', item)  for item in  variable]
         new_variable_2= [re.sub(r'_\w+', '', item_2)  for item_2 in  new_variable]
-        print(new_variable_2)
         with open(Cazy_ou, "a") as file:
-            # Write each item from the list to a new line in the file
             file.write("\n".join(new_variable_2)+"\n")
