@@ -7,14 +7,14 @@ Created on Thu Jun 15 13:50:20 2023
 import re
 import sys
 
-#The script uses the output file "overview" of dbcan and a output file.
+#The script uses the output file "overview" of dbcan and an output file.
 #It just enlists the results of dbcan keeping with a cazyme at leas founded
-#with one algorith.
+#with one algorithm.
 
-#In case of more than one algorith found the cazyme, the output name of eCAMI is keeped
-#If it just found the cazyme with DIAMOND and HMMER, DIAMOND name is keeped.
-#Finally it was just founded with HMMER, it is keeped but deleting the possition of the sequeces
-#If the gene is componned of more than one cazyme, all the cazymes are keeped and enlisted.
+#In case of more than one algorith found the cazyme, the output name of eCAMI is kept
+#If it just found the cazyme with DIAMOND and HMMER, DIAMOND name is kept.
+#Finally it was just founded with HMMER, it is kept but deleting the possition of the sequeces
+#If the gene is componned of more than one cazyme, all the cazymes are kept and enlisted.
 
 Cazy_in = sys.argv[1]
 Cazy_ou = sys.argv[2]
