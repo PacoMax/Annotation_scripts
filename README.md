@@ -8,4 +8,4 @@ In case more than one algorithm finds the cazyme, the output name of eCAMI is ke
 If it found the cazyme with DIAMOND and HMMER, DIAMOND's name is kept.
 If the gene is composed of more than one cazyme, all the cazymes are kept and enlisted.
 
-    Usage: ./get_cazymes.py <input.txt> <output.txt>
+Usage:         get_cazymes.py <input.txt> <output.txt>
