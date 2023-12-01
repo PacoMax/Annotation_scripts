@@ -9,4 +9,5 @@ If it found the cazyme with DIAMOND and HMMER, DIAMOND's name is kept.
 If the gene is composed of more than one cazyme, all the cazymes are kept and enlisted.
 
 Usage:
-    get_cazymes.py <input.txt> <output.txt>
+
+        get_cazymes.py <input.txt> <output.txt>
