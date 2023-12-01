@@ -8,12 +8,11 @@ import re
 import sys
 
 #The script uses the output file "overview" of dbcan and an output file.
-#It just enlists the results of dbcan keeping with a cazyme at leas founded
-#with one algorithm.
+#It just enlists the results of dbcan keeping with a cazyme at least founded
+#with two algorithms.
 
 #In case of more than one algorith found the cazyme, the output name of eCAMI is kept
-#If it just found the cazyme with DIAMOND and HMMER, DIAMOND name is kept.
-#Finally it was just founded with HMMER, it is kept but deleting the possition of the sequeces
+#If it found the cazyme with DIAMOND and HMMER, DIAMOND name is kept.
 #If the gene is componned of more than one cazyme, all the cazymes are kept and enlisted.
 
 Cazy_in = sys.argv[1]
@@ -33,13 +32,13 @@ with open(Cazy_in, "r") as file:
                 Cazy.append(variables[3])
             else:
                 Cazy.append(variables[4])
-        if variables[5]=="1":
-            if variables[2]!="-":
-                Cazy.append(variables[2])
-            if variables[3]!="-":
-                Cazy.append(variables[3])
-            if variables[4]!="-":
-                Cazy.append(variables[4])
+      #  if variables[5]=="1":
+       #     if variables[2]!="-":
+        #        Cazy.append(variables[2])
+         #   if variables[3]!="-":
+          #      Cazy.append(variables[3])
+           # if variables[4]!="-":
+            #    Cazy.append(variables[4])
     for variable in Cazy:
         variable=variable.split("+")
         new_variable= [re.sub(r'\(\w+-\w+\)', '', item)  for item in  variable]
